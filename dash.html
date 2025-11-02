@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanic Repairing Shop Dashboard</title>
+  <link rel="stylesheet" href="st1.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">🔧 Revive Auto</h2>
+      <nav>
+        <a href="#" class="active" data-section="overview">Dashboard</a>
+        <a href="#" data-section="reviews">Reviews</a>
+        <a href="#" data-section="gallery">Gallery</a>
+        <a href="#" data-section="staff">Staff</a>
+      </nav>
+      <footer>© 2025 Revive Auto</footer>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header class="topbar">
+        <input type="text" id="search" placeholder="Search..." />
+        <button id="addReviewBtn">+ Add Review</button>
+      </header>
+
+      <!-- Overview -->
+      <section id="overview" class="section">
+        <div class="cards">
+          <div class="card"><h3>Total Reviews</h3><p id="totalReviews">0</p></div>
+          <div class="card"><h3>Average Rating</h3><p id="avgRating">0</p></div>
+          <div class="card"><h3>Total Photos</h3><p id="totalPhotos">0</p></div>
+          <div class="card"><h3>Staff Members</h3><p id="totalStaff">0</p></div>
+        </div>
+
+        <div class="panels">
+          <div class="panel">
+            <h3>Recent Reviews</h3>
+            <div id="recentReviews"></div>
+          </div>
+          <div class="panel">
+            <h3>Recent Photos</h3>
+            <div id="recentPhotos" class="photo-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section id="reviews" class="section hidden">
+        <h3>All Reviews</h3>
+        <select id="sortReviews">
+          <option value="new">Newest</option>
+          <option value="rating">Top Rated</option>
+        </select>
+        <table class="reviews-table">
+          <thead>
+            <tr><th>Name</th><th>Vehicle</th><th>Rating</th><th>Message</th><th>Date</th><th>Action</th></tr>
+          </thead>
+          <tbody id="reviewsTable"></tbody>
+        </table>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery" class="section hidden">
+        <h3>Workshop Gallery</h3>
+        <div id="galleryGrid" class="photo-grid"></div>
+      </section>
+
+      <!-- Staff -->
+      <section id="staff" class="section hidden">
+        <h3>Our Staff</h3>
+        <div id="staffGrid" class="staff-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js1.js"></script>
+</body>
+</html>
