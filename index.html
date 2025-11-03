@@ -1,142 +1,108 @@
-<!-- index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Revive Auto — Mechanic & Repair Shop</title>
-  <meta name="description" content="Revive Auto — Professional car, bike, and commercial vehicle servicing." />
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanic Repairing Shop</title>
+  <link rel="stylesheet" href="st2.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo pulse" aria-hidden>
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3l-6 6" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/><path d="M17.5 8.5L13 13" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/><path d="M3 21l6-6" stroke="#081024" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" opacity="0.6"/></svg>
-        </div>
-        <div>
-          <h1 class="site-title">Revive Auto</h1>
-          <p class="tag">Trusted mechanic shop — Cars, Bikes & Commercial</p>
-        </div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">🔧 MechaFix Garage</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Expert Mechanics, Trusted Service</h1>
+      <p>We keep your vehicles running smooth with reliable repair and maintenance.</p>
+      <button class="btn-primary" onclick="window.location.href='p1.html'">
+      <a  class="btn" > Book Appointment</a> </button>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="review-grid">
+      <div class="review-card">
+        <p>“Excellent and quick service! My bike runs like new.”</p>
+        <h4>— Ramesh Kumar ⭐⭐⭐⭐⭐</h4>
       </div>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#book">Book</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div class="hero-card">
-        <span class="eyebrow">Fast • Reliable • Local</span>
-        <h2>We bring your vehicle back to life — maintenance, repair & full diagnostics</h2>
-        <p class="lead">Experienced mechanics, transparent pricing, and original-equivalent parts.</p>
-
-        <div class="features">
-          <div class="feat"><strong>Same-day Service</strong><h4>Quick turnarounds</h4></div>
-          <div class="feat"><strong>Warranty</strong><h4>90-day parts & labor</h4></div>
-          <div class="feat"><strong>Pickup & Drop</strong><h4>Available on request</h4></div>
-        </div>
-
-        <div class="cta-buttons">
-          <button class="btn-primary" onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'})">Book a Service</button>
-          <a href="#contact" class="btn-secondary">Call: +91 98765 43210</a>
-        </div>
-
-        <div class="rating">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ffd54d" stroke-width="1.4"/></svg>
-          <span><strong>4.8/5</strong> — 1,200+ reviews</span>
-        </div>
+      <div class="review-card">
+        <p>“Friendly staff and honest pricing. Highly recommended!”</p>
+        <h4>— Priya Singh ⭐⭐⭐⭐☆</h4>
       </div>
-
-      <aside class="book" id="book">
-        <h3>Quick Booking</h3>
-        <form id="bookingForm">
-          <label>Full name</label>
-          <input id="name" class="input" placeholder="Your full name" required>
-
-          <label>Phone</label>
-          <input id="phone" class="input" placeholder="Mobile number" required>
-
-          <div class="row">
-            <div><label>Vehicle</label>
-              <select id="vehicle" class="input"><option>Car</option><option>Bike</option><option>Truck</option></select>
-            </div>
-            <div><label>Preferred Date</label>
-              <input id="date" type="date" class="input" required>
-            </div>
-          </div>
-
-          <label>Service</label>
-          <select id="serviceType" class="input"><option>General Service</option><option>Engine Repair</option><option>AC Repair</option><option>Brakes</option><option>Electrical</option></select>
-
-          <label>Notes</label>
-          <textarea id="note" class="input" rows="3" placeholder="Add details..."></textarea>
-
-          <button class="btn-primary" type="submit">Request Booking</button>
-        </form>
-        <div id="bookMsg" class="message"></div>
-      </aside>
-    </section>
-
-    <section id="services">
-      <h2>Our Services</h2>
-      <div class="services">
-        <div class="service"><h3>Full Car Service</h3><p>Oil change, filter replacement, and inspection.</p></div>
-        <div class="service"><h3>Engine Diagnostics</h3><p>ECU scanning, tuning, and fault fixing.</p></div>
-        <div class="service"><h3>AC & Cooling</h3><p>Gas top-up and compressor repair.</p></div>
-        <div class="service"><h3>Brake & Suspension</h3><p>Alignment, shocks, and pads replacement.</p></div>
-        <div class="service"><h3>Electrical</h3><p>Battery, wiring, alternator repair.</p></div>
-        <div class="service"><h3>Pickup & Fleet</h3><p>Fleet maintenance and on-site service.</p></div>
+      <div class="review-card">
+        <p>“They fixed my car in just one day! Super fast service.”</p>
+        <h4>— Arjun Patel ⭐⭐⭐⭐⭐</h4>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="split">
-      <div>
-        <h3>Gallery</h3>
-        <div class="gallery">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="garage"/>
-          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf" alt="mechanic"/>
-          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" alt="tools"/>
-          <img src="https://images.unsplash.com/photo-1542362567-b07e54358753" alt="engine"/>
-        </div>
-      </div>
-      <div>
-        <h3>Testimonials</h3>
-        <div class="testimonial"><p>"Fixed my car the same day. Professional team!"</p><strong>— Priya S.</strong></div>
-        <div class="testimonial"><p>"Reliable pickup and drop. Great experience!"</p><strong>— Rohit K.</strong></div>
-      </div>
-    </section>
+  <!-- Gallery -->
+  <section id="gallery" class="gallery">
+    <h2>Workshop Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://via.placeholder.com/250x180" alt="Workshop 1">
+      <img src="https://via.placeholder.com/250x180" alt="Workshop 2">
+      <img src="https://via.placeholder.com/250x180" alt="Repair 1">
+      <img src="https://via.placeholder.com/250x180" alt="Customer Car">
+      <img src="https://via.placeholder.com/250x180" alt="Bike Repair">
+      <img src="https://via.placeholder.com/250x180" alt="Team Working">
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact & Location</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p>Revive Auto Workshop</p>
-          <p>123 Service Lane, Hyderabad</p>
-          <p>Email: hello@reviveauto.example</p>
-          <p>Phone: +91 98765 43210</p>
-          <p>Open Hours: Mon–Sat 9:00 — 19:00</p>
-        </div>
-        <div class="contact-form">
-          <input id="enqName" class="input" placeholder="Name"/>
-          <input id="enqPhone" class="input" placeholder="Phone"/>
-          <textarea id="enqMsg" class="input" rows="3" placeholder="Message"></textarea>
-          <button class="btn-primary" onclick="sendEnquiry()">Send</button>
-          <div id="enqResp" class="message"></div>
-        </div>
+  <!-- Staff Section -->
+  <section id="team" class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="download.png" alt="BABU">
+        <h4>BABU</h4>
+        <p>Lead Mechanic</p>
       </div>
-    </section>
+      <div class="team-member">
+        <img src="download.png" alt="Ravi">
+        <h4>Ravi Kumar</h4>
+        <p>Engine Specialist</p>
+      </div>
+      <div class="team-member">
+        <img src="download.png" alt="Suresh">
+        <h4>Suresh Patil</h4>
+        <p>Electrical Expert</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-      <div>&copy; Revive Auto — 2025</div>
-      <div>Built with care • <a href="#">Terms</a> • <a href="#">Privacy</a></div>
-    </footer>
-  </div>
-  <script src="script.js"></script>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <!-- <button class="btn-primary" onclick="window.location.href='p1.html'">Book a Service</button> -->
+    <!-- <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form> -->
+  </section>
+
+  <footer>
+    <p>© 2025 MechaFix Garage | All Rights Reserved</p>
+  </footer>
+
+  <script src="js2.js"></script>
 </body>
 </html>
-
-
-
